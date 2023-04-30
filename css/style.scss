@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap");
+
+$yes: hsl(154, 100%, 37%);
+$yes-darker: hsl(154, 100%, 33%);
+$no: hsl(358, 100%, 62%);
+$no-darker: hsl(358, 100%, 59%);
+$dark: hsl(0, 0%, 8%);
+$darker: hsl(0, 0%, 5%);
+
+@mixin gradient($color1, $color2) {
+  background: linear-gradient(80deg, $color1 40%, $color2 70%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  @include gradient($dark, $darker);
+  color: #fafafa;
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  padding: 1rem;
+}
+
+.page-title {
+  text-align: center;
+  grid-area: title;
+  font-weight: 300;
+}
+
+#toggle {
+  @include gradient($no, $no-darker);
+  font-weight: 300;
+  color: #fafafa;
+  font-size: 2rem;
+  border: none;
+  box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+}
+
+#toggle.no {
+  background-color: var(--no);
+}
+
+#toggle.yes {
+  @include gradient($yes, $yes-darker);
+  background-color: var(--yes);
+}
