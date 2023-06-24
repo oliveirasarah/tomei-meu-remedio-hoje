@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap");
 
 $yes: hsl(154, 100%, 37%);
 $yes-darker: hsl(154, 100%, 33%);
@@ -14,7 +14,7 @@ $darker: hsl(0, 0%, 5%);
 * {
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   box-sizing: border-box;
 }
 
